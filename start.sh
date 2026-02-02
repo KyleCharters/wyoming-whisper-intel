@@ -20,7 +20,7 @@ mkdir -p "${MODELS_DIR}"
 if [[ ! -s "${MODEL_PATH}" ]]; then
   echo "[start] downloading ${MODEL_FILE} ..."
   tmp="$(mktemp)"
-  wget -L -O "${tmp}" "${MODEL_BASE_URL}/${MODEL_FILE}"
+  wget -q -L -O "${tmp}" "${MODEL_BASE_URL}/${MODEL_FILE}"
   mv "${tmp}" "${MODEL_PATH}"
 fi
 
